@@ -37,28 +37,29 @@
   <script src="components/produtos.js"></script>
 
 </head>
-<body>
-  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+<body class="teste">
+  <ons-navigator id="navigator" page="page1.html" ></ons-navigator>
 
   <ons-template id="page1.html">
-    <ons-page id="first-page">
-
+    <ons-page id="first-page" class="bg-dark">
       <!-- Título do aplicativo -->
       <div class="content" style="text-align: center">
+        <div class="div1">
         <h3 class="mb-0 titulo">CGDS</h3>
-        <h5 class="mb-3 mt-0 subtitulo">scanner</h5>
+        <h5 class="mb-3 mt-0 subtitulo ">scanner</h5>
 
         <!-- Caixa com borda onde conterá a descrição -->
-        <span class="caixa border border-dark bg-white d-block ml-5 mr-5 mb-3 pl-3 pr-3 pt-3">
+        <span class="caixa border border-dark bg-dark d-block ml-5 mr-5 mb-3 pl-3 pr-3 pt-3">
           <p>Aplicativo para ler código de barras.</p>
         </span>
 
         <!-- Botão para ligar o leitor de código de barras -->
         <ons-button id="push-button" class="pl-3 pr-3">Testar</ons-button>
+        </div>
 
-      </div>
     </ons-page>
   </ons-template>
+      </div>
 
   <!-- Página de produto: ipad -->
   <ons-template id="ipad.html">
