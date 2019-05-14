@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+
   <!-- Biblioteca bootstrap css -->
   <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  
   <link rel="stylesheet" href="css/style.css">
 
   <script src="components/app.js"></script>
@@ -25,8 +27,14 @@
   <!-- Biblioteca bootstrap js -->
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
+  <!-- Arquivo para habilitar plugins -->
+  <script src="components/plugins.js"></script>
+
   <!-- Arquivo para o funcionamento do barcode -->
   <script src="components/barcode.js"></script>
+
+  <!-- Arquivo de informações sobre os produtos -->
+  <script src="components/produtos.js"></script>
 
 </head>
 <body>
@@ -34,33 +42,251 @@
 
   <ons-template id="page1.html">
     <ons-page id="first-page">
-      <ons-toolbar>
-        <div class="center">Bem vindo.</div>
-      </ons-toolbar>
 
+      <!-- Título do aplicativo -->
       <div class="content" style="text-align: center">
-        <h3 class="mb-3 titulo">Bartopper</h3>
+        <h3 class="mb-0 titulo">CGDS</h3>
+        <h5 class="mb-3 mt-0 subtitulo">scanner</h5>
 
+        <!-- Caixa com borda onde conterá a descrição -->
         <span class="caixa border border-dark bg-white d-block ml-5 mr-5 mb-3 pl-3 pr-3 pt-3">
           <p>Aplicativo para ler código de barras.</p>
         </span>
+
+        <!-- Botão para ligar o leitor de código de barras -->
         <ons-button id="push-button" class="pl-3 pr-3">Testar</ons-button>
+
       </div>
     </ons-page>
   </ons-template>
 
-  <!-- Página de resultado -->
-  <ons-template id="page2.html">
+  <!-- Página de produto: ipad -->
+  <ons-template id="ipad.html">
     <ons-page id="second-page">
       <ons-toolbar>
         <div class="left"><ons-back-button>Page 1</ons-back-button></div>
-        <div class="center">Page 2</div>
+        <div class="center">Voltar</div>
       </ons-toolbar>
 
-      <div class="content" style="text-align: center">
-        <p>This is the second page.</p>
-        <ons-button id="pop-button">Pop page</ons-button>
+      <div class="form-group">
+
+        <h3>iPad Mini Wi-Fi 64Gb - Cinza Espacial</h3>
+        <br>
+            
+        <center>
+          <img src="img/ipad.jpg" class="img-fluid img-produto">
+        </center>
+        <br>
+            
+        <label><b>Valor: </b></label>
+        <p>R$ 3.499,00</p>
+        <br>
+
+        <label><b>Descrição: </b></label>
+        <p class="mb-3">Processador A12 Bionic com arquitetura de 64 bits Neural Engine Coprocessador M12 integrado</p>
+
+        <p class="mb-3">Sistema operacional iOS</p>
+
+        <p class="mb-3">Tamanho da tela 7.9"</p>
+
+        <p class="mb-3">Tecnologia Wi-Fi</p>
+
+        <p class="mb-3">Resolução da câmera - Câmera traseira: 8MP; - Câmera frontal: 7MP</p>
+
+        <p class="mb-3">GPS Sim</p>
+
+        <p class="mb-3">Grava vídeos Sim</p>
+
+        <p class="mb-3">Câmera traseira Sim</p>
+              
+        <p class="mb-3">Câmera frontal Sim</p>
+
+        <p class="mb-3">Memória Flash 64 GB</p>
+
+        <p class="mb-3">Funciona como celular: Não</p>
       </div>
+    </ons-page>
+  </ons-template>
+
+  <!-- Página de produto: Galaxy j8 -->
+  <ons-template id="j8.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 3</ons-back-button></div>
+        <div class="center">Voltar</div>
+      </ons-toolbar>
+
+        <div class="form-group">
+          <h3>Samsung Galaxy J8 Dual Chip 4g 64gb Tela 6</h3>
+          <br>
+
+          <center>
+            <img src="img/j8.jpg" class="img-fluid img-produto">
+          </center>
+          <br>
+              
+          <label><b>Valor: </b></label>
+          <p>R$ 1.888,00</p>
+          <br>
+
+          <label><b>Velocidade do Processador: </b></label>
+          <p>1.8GHz</p>
+          <br>
+
+          <label><b>Tipo de Processador: </b></label>
+          <p>Octa Core</p>
+          <br>
+
+          <label><b>Tamanho (Tela Principal): </b></label>
+          <p>153.6mm (6.0")</p>
+          <br>
+
+          <label><b>Resolução (Tela Principal): </b></label>
+          <p>1480 x 720 (HD*)</p>
+          <br>
+
+          <label><b>Câmera Resolução - Câmera Traseira: </b></label>
+          <p>16.0 MP + 5.0 MP</p>
+          <br>
+
+          <label><b>Memória RAM(GB): </b></label>
+          <p>4 GB</p>
+          <br>
+
+          <label><b>Memória Total Interna (GB): </b></label>
+          <p>64 GB</p>
+          <br>
+
+          <label><b>Memória Disponível (GB): </b></label>
+          <p>50.6 GB</p>
+          <br>
+
+        </div>
+    </ons-page>
+  </ons-template>
+
+  <!-- Página de produto: Motorola One -->
+  <ons-template id="moto.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 4</ons-back-button></div>
+        <div class="center">Voltar</div>
+      </ons-toolbar>
+
+        <div class="form-group">
+          <h3>Motorola One XT1941 Branco 64GB</h3>
+          <br>
+
+          <center>
+            <img src="img/motoone.png" class="img-fluid img-produto">
+          </center>
+          <br>
+              
+          <label><b>Valor: </b></label>
+          <p>R$ 1.888,00</p>
+          <br>
+
+          <label><b>Sistema Operacional: </b></label>
+          <p>Android 8.1 Oreo</p>
+          <br>
+
+          <label><b>Processador: </b></label>
+          <p>Qualcomm Snapdragon 625 (MSM8953) Octa-Core de 2.0 GHz</p>
+          <br>
+
+          <label><b>Memória RAM: </b></label>
+          <p>4 GB</p>
+          <br>
+
+          <label><b>Tecnologia: </b></label>
+          <p>GSM, 3G e 4G</p>
+          <br>
+
+          <label><b>Memória Interna: </b></label>
+          <p>64 GB</p>
+          <br>
+
+          <label><b>Cor: </b></label>
+          <p>Branco</p>
+          <br>
+
+          <label><b>Características Gerais: </b></label>
+          <ul class="lista">
+            <li>Tela Max Vision e design ao máximo</li>
+            <li>Câmera dupla e armazenamento ilimitado</li>
+            <li>Android One: primeiro do Brasil, atualizado e seguro</li>
+            <li>Carregamento ultrarrápido TurboPower</li>
+            <li>Últimas inovações do Google incorporadas</li>
+            <li>Leitor Biométrico (Impressão Digital)</li>
+          </ul>
+          <br>
+
+        </div>
+    </ons-page>
+  </ons-template>
+
+  <!-- Página de produto: Asus Zenfone -->
+  <ons-template id="asus.html">
+    <ons-page id="fivth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 5</ons-back-button></div>
+        <div class="center">Voltar</div>
+      </ons-toolbar>
+
+        <div class="form-group">
+          <h3>Asus Zenfone Max Pro M1</h3>
+          <br>
+
+          <center>
+            <img src="img/asus.png" class="img-fluid img-produto">
+          </center>
+          <br>
+              
+          <label><b>Valor: </b></label>
+          <p>R$ 1.199,00</p>
+          <br>
+
+          <label><b>Sistema Operacional: </b></label>
+          <p>Android 8.1 Oreo</p>
+          <br>
+
+          <label><b>Processador: </b></label>
+          <p>Qualcomm Snapdragon SDM636 1,8 GHz, 2 Mb Cache</p>
+          <br>
+
+          <label><b>Memória RAM: </b></label>
+          <p>4 GB</p>
+          <br>
+
+          <label><b>Memória Interna: </b></label>
+          <p>64 GB</p>
+          <br>
+
+          <laebl><b>Memória Expansiva:</b></label>
+          <p>2TB Sd</p>
+          <br>
+
+          <label><b>Tela:</b></label>
+          <p>6,0" Led Backlight Ips panel (1080x2160)</p>
+          <br>
+
+          <label><b>Tipo de Chip: </b></label>
+          <p>Dual Nano Chip</p>
+          <br>
+
+          <label><b>Conectividade:</b></label>
+          <p>3G; 4G; Wi-fi</p>
+          <br>
+
+          <label><b>Câmera Frontal:</b></label>
+          <p>8MP</p>
+          <br>
+
+          <label><b>Câmera Traseira:</b></label>
+          <p>16+5MP</p>
+          <br>
+
+        </div>
     </ons-page>
   </ons-template>
 </body>
